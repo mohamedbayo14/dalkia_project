@@ -1,0 +1,65 @@
+p1
+{
+    font-weight: bold;
+    font-size: 10.5px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+# messagerie {
+    width: 300px;
+    line-height: 100px;
+    border: 1px solid black;
+    text-align: justify;
+}
+
+#menu ul {
+ margin:0;
+ padding:0;
+ list-style-type:none;
+ text-align:center;
+ }
+#menu li {
+ float:left;
+ margin:auto;
+ padding:0;
+ background-color:black;
+ }
+#menu li a {
+ display:block;
+ width:100px;
+ color:white;
+ text-decoration:none;
+ padding:5px;
+ }
+#menu li a:hover {
+ color:#FFD700;
+ }
+
+#menu ul li ul {
+ display:none;
+ }
+#menu ul li:hover ul {
+ display:block;
+ }
+#menu li:hover ul li {
+ float:none;
+ }
+#menu li ul {
+ position:absolute;
+ }
+
+body {
+    margin: 0;
+    padding : 0;
+    text-align: center;
+   /*background: linear-gradient (rgba(0,0,50,0.5), rgba(0,0,50,0.5));*/
+    background-image: url("Catalina.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+
+
