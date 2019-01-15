@@ -27,8 +27,8 @@ while ($donnees = $reponse->fetch())
     $decembre= intval($donnees["decembre"]);
 
 } 
-require_once ('C:\Users\davy7\Desktop\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
-require_once ('C:\Users\davy7\Desktop\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
+require_once ('C:\wamp64\www\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
+require_once ('C:\wamp64\www\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
 $bdd=new PDO('mysql:host=localhost;dbname=dalkia_database','root','', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   
 
