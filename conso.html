@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Consommation</title>
+
+	<link rel="stylesheet" type="text/css" href="conso.css">
+	<!-- <script src="./d3.min.js"></script> -->
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+	<script src="./conso.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<nav
+	id="menu" class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+	<!-- Le container permet d'aligner les éléments de la barre de navigation sur les autre conteneurs -->
+	<div class="container">
+		<!-- Icone "home" sur la barre de navigation -->
+		<a class="navbar-brand" href="#"><img id="IdDalkia" src="https://upload.wikimedia.org/wikipedia/fr/thumb/3/3c/Logo-dalkia-groupe-edf.jpg/170px-Logo-dalkia-groupe-edf.jpg" alt="Dalkia"></a>
+		<!-- Bouton apparaissant pour les petits écrans, à cliquer pour faire apparaitre le menu -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#elementsMenu" aria-controls="elementsMenu" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- Elements du menu -->
+		<div class="collap
+		se navbar-collapse" id="elementsMenu">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="main_page.php">Consommation </a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="main_page.php">Contrat </a>
+			</li>          
+			<li class="nav-item active">
+				<a class="nav-link" href="deconnexion.php"> Deconnexion </a>
+			</li>
+			<!-- commentaire -->
+		</ul>
+		</div>	
+	</div>
+</nav>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+</head>
+<body>
+	<svg></svg>
+	<div></div>	
+</body>
+
+</html>
