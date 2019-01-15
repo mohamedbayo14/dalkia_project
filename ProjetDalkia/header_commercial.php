@@ -21,6 +21,9 @@
                  <li class="nav-item active">
                 <a class="nav-link" href="page_modification.php">Modification </a>
                 </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="page_comparaison.php"> Comparaison </a>
+                </li>
                  <li class="nav-item active">
                 <a class="nav-link" href="deconnexion.php"> Deconnexion </a>
                 </li>
