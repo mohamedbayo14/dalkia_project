@@ -14,13 +14,24 @@
       <?php session_start();   ?>
       <!-- appel de la page traitement_information_inscrit.php qui va permettre de créer le tableau  -->
       <?php include('traitement_information_inscrit.php'); ?> 
-    
+      
       
 
    
   </head>
 </head>
+    
 <body>
+<style>
+
+    body
+    {
+     background-image: url("photo/conception.jpg");
+     background-size: cover
+    }
+
+</style>
+
 <br><br><br>
 
 <br><br><br><h1> Information des inscrits</h1><br><br>
@@ -51,19 +62,30 @@ $req->closeCursor();
 ?>
 
 
- </table>   
+ </table>  
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-color:black;
+  border-collapse: collapse;
+  
+  width: 100%;
+}
 
+tr {
+    background-color: aliceblue;
+    opacity : 0.65;
+    text-align: left;
+    padding: 8px;
+}
 
-
+ th, td { color:black;
+     
+     text-align: left;
+     padding: 8px;
     
- 
-           
-
-
-    
-            
- 
-
+}
+</style>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

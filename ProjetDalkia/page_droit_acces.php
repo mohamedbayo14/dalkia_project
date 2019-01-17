@@ -16,8 +16,36 @@
   </head>
 </head>
 <body>
+<style>
+
+
+        
+    body
+    {
+     background-image: url("photo/fjord.jpg");
+     background-size: cover
+
+    }
+        form
+        {
+            /*text-align: center;*/
+            position: absolute;
+            left: 37%;
+             background:#F9F9F9;
+             opacity: 0.75;
+             padding: 25px;
+        }
+   
+
+</style>
 <br>
 <br>
+<br>
+<br>
+
+<br><br>
+<br>
+
 
 <br>
 <!-- Donne les droits d'accès à une personne inscrite de la liste déroulante lorsqu'on appuie sur le bouton valider -->

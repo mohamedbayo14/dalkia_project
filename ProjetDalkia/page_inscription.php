@@ -23,7 +23,21 @@
     
   </head>
   <body>
+<style>
 
+    body
+    {
+     background-image: url("photo/paysage.jpg");
+     background-size: cover;
+     background-position: center; 
+    }
+     form
+         {
+             background:#F9F9F9;
+             opacity: 0.55;
+             padding: 25px;
+        }
+</style>
        <br />
        <br />
        <br />
@@ -43,9 +57,14 @@
         }
         
     </style>
-    <p1> *Champ obligatoire à remplir </p1>
+    
     <br/>
-    <section>
+
+
+       <br />
+        <!-- appel de la page traitement_inscription.php lorsque qu'on appuie sur le bouton validé et lorsques toutes les conditions sont respectées-->
+        <form method="POST" action="traitement_inscription.php">
+                <section>
         <div class="row">
             <div class="col-lg-8">
 
@@ -53,10 +72,7 @@
                 </div>
         </div>
     </section>
-
-       <br />
-        <!-- appel de la page traitement_inscription.php lorsque qu'on appuie sur le bouton validé et lorsques toutes les conditions sont respectées-->
-        <form method="POST" action="traitement_inscription.php">
+            
             <section>
                 <h4 class="formtitle">Nom*</h4>
                 <div class="form-group form-row">
@@ -166,7 +182,7 @@
                     </div>
                 </fieldset>
             
-            <p> <button class="btn btn-primary " type="submit" name="valid_contact">Envoyer</button> </p>
+           <center> <p> <button class="btn btn-primary " type="submit" name="valid_contact">Envoyer</button> </p></center>
         </form>
     </div>
 

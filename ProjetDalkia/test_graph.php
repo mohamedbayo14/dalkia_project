@@ -1,7 +1,7 @@
 <?php
 
-require_once ('C:\Users\davy7\Desktop\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
-require_once ('C:\Users\davy7\Desktop\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
+require_once ('C:\Users\davy7\Desktop\projetDalkia\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
+require_once ('C:\Users\davy7\Desktop\projetDalkia\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
   
 $datay1 = array(0,1,2,3,4,5,6,7,8,9,10,11 );
 // Setup the graph

@@ -22,7 +22,19 @@
     
   </head>
   <body>
-
+<style>
+        body
+        {
+           background-image: url("photo/landscape.jpg");
+           background-size: cover
+        }
+     form
+         {
+             background:#F9F9F9;
+             opacity: 0.75;
+             padding: 25px;
+        }
+    </style>
        <br />
        <br />
        <br />

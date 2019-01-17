@@ -20,7 +20,7 @@ elseif (($password == $_POST['pass']) && ($statut=='admin'))
 {
     session_start();
     $_SESSION['id'] = $id_identification; // stockage en variable globale
-    echo "<script type='text/javascript'>document.location.replace('page_menu_admin.php');</script>";//appel du menu administrateur
+    echo "<script type='text/javascript'>document.location.replace('page_information_inscrit.php');</script>";//appel du menu administrateur
     
 }
 else
