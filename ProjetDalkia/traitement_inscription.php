@@ -11,7 +11,7 @@ catch(Exception $e)
 }
 
 // insérer une ligne dans la base de données
-$requete = $bdd->prepare('INSERT INTO identification(nom,mail, lieu,identifiant,mdp,statut,prenom) VALUES(?,?,?,?,?,?,?)');
+$requete = $bdd->prepare('INSERT INTO identification(nom,mail, lieu,identifiant,mdp,statut,prenom) VALUES(?,?,?,?,MD5(?),?,?)');
 // recherche des informations contenues dans les textareas
 $requete->execute(array($_POST['nom'],$_POST['courriel'],$_POST['lieu'],$_POST['identifiant'],$_POST['pass'],'inconnu',$_POST['prenom']));
 //affichage message de confirmation
