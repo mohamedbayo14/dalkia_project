@@ -10,7 +10,7 @@ while ($donnees = $requete->fetch())// on sort les informations de la base de do
 	$password= $donnees['mdp'] ;
     $statut= $donnees['statut'] ;
 }  
-if (($password == $_POST['pass']) && ($statut=='utilisateur')) //condition si la personne qui se connecte est un commercial
+if (($password == md5($_POST['pass']) && ($statut=='utilisateur')) //condition si la personne qui se connecte est un commercial
 {
     session_start();
     $_SESSION['id'] = $id_identification; // stockage en variable globale
