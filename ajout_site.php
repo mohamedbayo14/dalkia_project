@@ -23,10 +23,12 @@
 </head>
 <body>
 
+<h1>AJOUT D'UN SITE</h1>
+
 <!-- MultiStep Form -->
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
-        <form id="msform">
+        <form id="msform" action="ajout_site.inc.php" method="POST">
             <!-- progressbar -->
             <ul id="progressbar">
                 <li class="active">Informations sur le site</li>
@@ -46,42 +48,60 @@
             <fieldset>
                 <h2 class="fs-title">Puissance souscrite</h2>
                 <h3 class="fs-subtitle">Détail dans la souscription</h3>
-                <input type="number" name="ps2015" placeholder="Puissance souscrite en 2015"/>
-                <input type="number" name="ps2016" placeholder="Puissance souscrite en 2016"/>
-                <input type="number" name="ps2017" placeholder="Puissance souscrite en 2017"/>
+                <input type="number" name="num_sous_station" placeholder="Numéro sous station"/>
+                <input type="text" name="ps2015" placeholder="Puissance souscrite en 2015"/>
+                <input type="text" name="ps2016" placeholder="Puissance souscrite en 2016"/>
+                <input type="text" name="ps2017" placeholder="Puissance souscrite en 2017"/>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input type="button" name="next" class="next action-button" value="Next"/>
             </fieldset>
             <fieldset>
                 <h2 class="fs-title">Puissance consommée</h2>
                 <h3 class="fs-subtitle">Détails sur la consommation au niveau du site</h3>
-                <input type="number" name="cs2011" placeholder="Consommation en 2011"/>
-                <input type="number" name="cs2012" placeholder="Consommation en 2012"/>
-                <input type="number" name="cs2013" placeholder="Consommation en 2013"/>
-                <input type="number" name="cs2014" placeholder="Consommation en 2014"/>
-                <input type="number" name="cs2015" placeholder="Consommation en 2015"/>
-                <input type="number" name="cs2016" placeholder="Consommation en 2016"/>
-                <input type="number" name="cs2017" placeholder="Consommation en 2017"/>
+                <input type="text" name="cs2011" placeholder="Consommation en 2011"/>
+                <input type="text" name="cs2012" placeholder="Consommation en 2012"/>
+                <input type="text" name="cs2013" placeholder="Consommation en 2013"/>
+                <input type="text" name="cs2014" placeholder="Consommation en 2014"/>
+                <input type="text" name="cs2015" placeholder="Consommation en 2015"/>
+                <input type="text" name="cs2016" placeholder="Consommation en 2016"/>
+                <input type="text" name="cs2017" placeholder="Consommation en 2017"/>
                 <input type="button" name="ps" class="previous action-button-previous" value="Previous"/>
                 <input type="button" name="next" class="next action-button" value="Next"/>
                 
             </fieldset>
             <fieldset>
-                <input type="number" name="R1_2012" placeholder="R1 2012"/>
-                <input type="number" name="R2_2012" placeholder="R2 2012"/>
-                <input type="number" name="R1R2_2012" placeholder="R1+R2 2012"/>
-                <input type="number" name="R1_2013" placeholder="R1 2013"/>
-                <input type="number" name="cs2015" placeholder="Consommation en 2015"/>
-                <input type="number" name="cs2016" placeholder="Consommation en 2016"/>
-                <input type="number" name="cs2017" placeholder="Consommation en 2017"/>
+                <h2 class="fs-title">R1 et R2</h2> 
+                <br>
+                <input type="text" name="R1_2012" placeholder="R1 2012"/>
+                <input type="text" name="R2_2012" placeholder="R2 2012"/>
+                <input type="text" name="R1R2_2012" placeholder="R1+R2 2012"/>
+                <input type="text" name="R1_2013" placeholder="R1 2013"/>
+                <input type="text" name="R2_2013" placeholder="R2 2013"/>
+                <input type="text" name="R1R2_2013" placeholder="R1+R2 2013"/>
+                <input type="text" name="R1_2014" placeholder="R1 2014"/>
+                <input type="text" name="R2_2014" placeholder="R2 2014"/>
+                <input type="text" name="R1R2_2014" placeholder="R1+R2 2014"/>
+                <input type="text" name="R1_2015_1st" placeholder="R1 2015 1st periode"/>
+                <input type="text" name="R2_2015_1st" placeholder="R2 2015 1st periode"/>
+                <input type="text" name="R1R2_2015_1st" placeholder="R1+R2 2015 1st periode"/>
+                <input type="text" name="R1_2015_2nde" placeholder="R1 2015 2nde periode"/>
+                <input type="text" name="R2_2015_2nde" placeholder="R2 2015 2nde periode"/>
+                <input type="text" name="R1R2_2015_2nde" placeholder="R1+R2 2015 2nde periode"/>
+                <input type="text" name="R1R2_2015" placeholder="R1+R2 2015"/>
+                <input type="text" name="R1_2016" placeholder="R1 2016"/>
+                <input type="text" name="R2_2016" placeholder="R2 2016"/>
+                <input type="text" name="R1R2_2016" placeholder="R1+R2 2016"/>
+                <input type="text" name="R1_2017" placeholder="R1 2017"/>
+                <input type="text" name="R2_2017" placeholder="R2 2017"/>
+                <input type="text" name="R1R2_2017" placeholder="R1+R2 2017"/>
 
-                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+                <input type="submit" name="submit" value="Submit"/>
             </fieldset>
         </form>
         <!-- link to designify.me code snippets -->
-        <div class="dme_link">
+        <!-- <div class="dme_link">
             <p><a href="http://designify.me/code-snippets-js/" target="_blank">More Code Snippets</a></p>
-        </div>
+        </div> -->
         <!-- /.link to designify.me code snippets -->
     </div>
 </div>
