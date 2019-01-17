@@ -60,7 +60,8 @@
     <div class="Graph">
            <?php              
               $_SESSION['nom_entre'] = $_POST['nom_entreprise']; 
-              echo "<img src='./traitement_consommation.php'; />";              
+              echo "<img src='./traitement_consommation.php'; />";
+              #include 'traitement_consommation.php';
            ?>
     </div>
     <!-- Optional JavaScript -->

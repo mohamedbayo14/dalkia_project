@@ -1,5 +1,4 @@
 <?php
-session_start();
 try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=dalkia_database;charset=utf8', 'root', '');
@@ -8,9 +7,8 @@ catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
-$entreprise=$_SESSION['nom_entre'];
 $reponse = $bdd->prepare('SELECT janvier,fevrier,mars,avril,mai,juin,juillet,aout,septembre,octobre,novembre,decembre FROM consommation WHERE entreprise=?');
-$reponse->execute(array($entreprise));
+$reponse->execute(array($_POST['nom_entreprise']));
 while ($donnees = $reponse->fetch())
 {
     $janvier= intval($donnees["janvier"]);   
@@ -25,7 +23,7 @@ while ($donnees = $reponse->fetch())
     $octobre= intval($donnees["octobre"]);   
     $novembre= intval($donnees["novembre"]);   
     $decembre= intval($donnees["decembre"]);
-} 
+};
 require_once ('C:\Users\davy7\Desktop\projetDalkia\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
 require_once ('C:\Users\davy7\Desktop\projetDalkia\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
 $bdd=new PDO('mysql:host=localhost;dbname=dalkia_database','root','', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -55,5 +53,4 @@ $p1->SetColor("#6495ED");
 $graph->legend->SetFrameWeight(1);
 // Output line
 $graph->Stroke();
-
 ?>

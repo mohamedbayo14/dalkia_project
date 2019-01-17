@@ -18,7 +18,21 @@
 
   </head>
   <body>
+<style>
 
+    body
+    {
+     background-image: url("photo/catalina.jpg");
+     background-size: cover
+
+    }
+     form
+         {
+             background:#F9F9F9;
+             opacity: 0.75;
+             padding: 25px;
+        }
+</style>
        <br />
        <br />
        <br />
@@ -26,7 +40,6 @@
 
 
 <div class="container ">
-    <p1>*Champ obligatoire à remplir</p1>
     <style>
         p1
         {
@@ -42,7 +55,7 @@
     <section>
         <div class="row">
             <div class="col-lg-8">
-     <h2 id="contactForm">Formulaire d'inscription</h2>
+     <h2 id="contactForm">Page de connexion</h2>
                 </div>
         </div>
        <br />
@@ -73,7 +86,7 @@
         <!-- Renvoie à la page traitement_page_connexion.php lors de l'appuie sur le bouton si toute les conditions ont été respecté -->
         <form method="POST" action="traitement_page_connexion.php">
             <section>
-                <h4 class="formtitle">Identification*</h4>
+                <h4 class="formtitle">Identification</h4>
                 <fieldset>
                     <div class="form-group">
                         <div class="form-row">
@@ -94,7 +107,7 @@
                     </div>
                 </fieldset>
             </section>     
-                <h4 class="formtitle">Mot de passe*</h4>
+                <h4 class="formtitle">Mot de passe</h4>
                 <fieldset>
                     <div class="form-group">
                         <div class="form-row">
@@ -115,7 +128,7 @@
                     </div>
                 </fieldset>
             
-            <p> <button class="btn btn-primary" type="submit" name="valid_contact">Valider</button> </p>
+            <center><p> <button class="btn btn-primary" type="submit" name="valid_contact">Valider</button> </p></center>
         </form>
     </div>
 
