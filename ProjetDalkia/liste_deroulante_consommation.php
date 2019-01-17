@@ -4,7 +4,7 @@
 $bdd=new PDO('mysql:host=localhost;dbname=dalkia_database','root','', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 //recherche des nom_entreprise
-$requete=$bdd->query("SELECT entreprise FROM consommation");
+$requete=$bdd->query("SELECT entreprise FROM conso_mensuelle");
 while ($donnees = $requete->fetch())
 {
 ?>

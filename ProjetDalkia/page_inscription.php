@@ -34,7 +34,7 @@
      form
          {
              background:#F9F9F9;
-             opacity: 0.55;
+             opacity: 0.75;
              padding: 25px;
         }
 </style>
