@@ -118,7 +118,7 @@
                                           <?php if ($erreur_feedback){echo isset($_SESSION['password'])? 'is-invalid' : 'is-valid' ; }
                                           ?>
                                           " type="password" id="pass" name="pass" placeholder="Votre password"
-                                          <?php if (isset($_SESSION['password'])){echo $_SESSION['password'];}
+                                          <?php if (isset ($_SESSION['password'])){echo $_SESSION['password'];}
                                           ?> required>
                             <?php if (isset($_SESSION['password_erreur'])){
     echo '<div class="col-sm-4"></div><div class="col-sm-8 invalid-feedback">'.$_SESSION['password_erreur'].'</div>';

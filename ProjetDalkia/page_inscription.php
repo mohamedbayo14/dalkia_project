@@ -34,7 +34,7 @@
      form
          {
              background:#F9F9F9;
-             opacity: 0.55;
+             opacity: 0.75;
              padding: 25px;
         }
 </style>
@@ -78,11 +78,7 @@
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="nom">Nom</label>
                     <!-- Vérifie que le champ de texte à bien été remplie-->
-                    <input class="form-control col-sm-8 <?php if ($erreur_feedback){echo isset($_SESSION['nom_erreur'])? 'is-invalid' : 'is-valid' ; }?>" id="nom" name="nom" placeholder="Votre nom..." <?php if (isset($_SESSION['nom'])){echo 'value='.$_SESSION['nom'];} ?> required>
-                    <?php if (isset($_SESSION['nom_erreur'])){
-    echo '<div class="col-sm-4"></div><div class="col-sm-8 invalid-feedback">'.$_SESSION['nom_erreur'].'</div>';
-    unset($_SESSION['nom_erreur']);}
-                    ?>
+                    <input class="form-control col-sm-8  required">  
                 </div>
             </section>
             <section>
@@ -90,11 +86,8 @@
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="prenom">Prénom</label>
                     <!-- Vérifie que le champ de texte à bien été remplie-->
-                    <input class="form-control col-sm-8 <?php if ($erreur_feedback){echo isset($_SESSION['prenom_erreur'])? 'is-invalid' : 'is-valid' ; }?>" id="prenom" name="prenom" placeholder="Votre prénom..." <?php if (isset($_SESSION['prenom'])){echo 'value='.$_SESSION['prenom'];} ?> required>
-                    <?php if (isset($_SESSION['nom_erreur'])){
-    echo '<div class="col-sm-4"></div><div class="col-sm-8 invalid-feedback">'.$_SESSION['prenom_erreur'].'</div>';
-    unset($_SESSION['prenom_erreur']);}
-                    ?>
+                    <input class="form-control col-sm-8  required">
+                    
                 </div>
             </section>
             <section>
@@ -104,16 +97,9 @@
                         <div class="form-row">
                             <label class="col-sm-4" for="courriel">Adresse de courriel</label>
                             <!-- Vérifie que le champ de texte à bien été remplie et qu'il correspond bien à un email-->
-                            <input class="form-control col-sm-8
-                                          <?php if ($erreur_feedback){echo isset($_SESSION['courriel_erreur'])? 'is-invalid' : 'is-valid' ; }
-                                          ?>
+                            <input class="form-control col-sm-8 
                                           " type="email" id="courriel" name="courriel" placeholder="xxx@yyy.zz"
-                                          <?php if (isset($_SESSION['courriel'])){echo $_SESSION['courriel'];}
-                                          ?> required>
-                            <?php if (isset($_SESSION['courriel_erreur'])){
-    echo '<div class="col-sm-4"></div><div class="col-sm-8 invalid-feedback">'.$_SESSION['courriel_erreur'].'</div>';
-    unset($_SESSION['courriel_erreur']);}
-                            ?>
+                                           required>
                         </div>
                     </div>
                 </fieldset>
@@ -126,15 +112,7 @@
                             <label class="col-sm-4" for="localisation">Adresse</label>
                             <!-- Vérifie que le champ de texte à bien été remplie-->
                             <input class="form-control col-sm-8
-                                          <?php if ($erreur_feedback){echo isset($_SESSION['localisation'])? 'is-invalid' : 'is-valid' ; }
-                                          ?>
-                                          " type="POST" id="lieu" name="lieu" placeholder="Votre adresse"
-                                          <?php if (isset($_SESSION['localisation'])){echo $_SESSION['localisation'];}
-                                          ?> required>
-                            <?php if (isset($_SESSION['localisation_erreur'])){
-    echo '<div class="col-sm-4"></div><div class="col-sm-8 invalid-feedback">'.$_SESSION['localisation_erreur'].'</div>';
-    unset($_SESSION['localisation_erreur']);}
-                            ?>
+                                          " type="POST" id="lieu" name="lieu" placeholder="Votre adresse" required>
                         </div>
                     </div>
                 </fieldset>
@@ -147,15 +125,8 @@
                             <label class="col-sm-4" for="identifiant">Identifiant</label>
                             <!-- Vérifie que le champ de texte à bien été remplie-->
                             <input class="form-control col-sm-8
-                                          <?php if ($erreur_feedback){echo isset($_SESSION['identifiant'])? 'is-invalid' : 'is-valid' ; }
-                                          ?>
                                           " type="POST" id="identifiant" name="identifiant" placeholder="Votre identifiant"
-                                          <?php if (isset($_SESSION['identifiant'])){echo $_SESSION['identifiant'];}
-                                          ?> required>
-                            <?php if (isset($_SESSION['identifiant_erreur'])){
-    echo '<div class="col-sm-4"></div><div class="col-sm-8 invalid-feedback">'.$_SESSION['identifiant_erreur'].'</div>';
-    unset($_SESSION['identifiant_erreur']);}
-                            ?>
+                                           required>
                         </div>
                     </div>
                 </fieldset>
@@ -169,15 +140,8 @@
                             <label class="col-sm-4" for="password">Password</label>
                             <!-- Vérifie que le champ de texte à bien été remplie-->
                             <input class="form-control col-sm-8
-                                          <?php if ($erreur_feedback){echo isset($_SESSION['password'])? 'is-invalid' : 'is-valid' ; }
-                                          ?>
                                           " type="password" id="pass" name="pass" placeholder="Votre password"
-                                          <?php if (isset($_SESSION['password'])){echo $_SESSION['password'];}
-                                          ?> required>
-                            <?php if (isset($_SESSION['password_erreur'])){
-    echo '<div class="col-sm-4"></div><div class="col-sm-8 invalid-feedback">'.$_SESSION['password_erreur'].'</div>';
-    unset($_SESSION['password_erreur']);}
-                            ?>
+                                           required>
                         </div>
                     </div>
                 </fieldset>

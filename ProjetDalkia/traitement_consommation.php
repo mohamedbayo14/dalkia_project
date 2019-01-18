@@ -7,7 +7,7 @@ catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
-$reponse = $bdd->prepare('SELECT janvier,fevrier,mars,avril,mai,juin,juillet,aout,septembre,octobre,novembre,decembre FROM consommation WHERE entreprise=?');
+$reponse = $bdd->prepare('SELECT janvier,fevrier,mars,avril,mai,juin,juillet,aout,septembre,octobre,novembre,decembre FROM conso_mensuelle WHERE entreprise=?');
 $reponse->execute(array($_POST['nom_entreprise']));
 while ($donnees = $reponse->fetch())
 {
@@ -24,8 +24,8 @@ while ($donnees = $reponse->fetch())
     $novembre= intval($donnees["novembre"]);   
     $decembre= intval($donnees["decembre"]);
 };
-require_once ('C:\Users\davy7\Desktop\projetDalkia\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
-require_once ('C:\Users\davy7\Desktop\projetDalkia\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
+require_once ('C:\Users\marti\Desktop\cours 3A-IF\DalkiaProjet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
+require_once ('C:\Users\marti\Desktop\cours 3A-IF\DalkiaProjet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
 $bdd=new PDO('mysql:host=localhost;dbname=dalkia_database','root','', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   
 $datay1 = array($janvier,$fevrier,$mars,$avril,$mai,$juin,$juillet,$aout,$septembre,$octobre,$novembre,$decembre );
