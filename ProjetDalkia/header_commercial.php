@@ -13,7 +13,10 @@
             se navbar-collapse" id="elementsMenu">
             <ul class="navbar-nav mr-auto">
                  <li class="nav-item active">
-                <a class="nav-link" href="page_menu_consommation.php">Consommation </a>
+                <a class="nav-link" href="page_menu_consommation.php">Consommation mensuelle </a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="conso_annuelle.php"> Consommation annuelle </a>
                 </li>
                  <li class="nav-item active">
                 <a class="nav-link" href="main_page.php">Prevision </a>
@@ -24,9 +27,13 @@
                 <li class="nav-item active">
                 <a class="nav-link" href="page_comparaison.php"> Comparaison </a>
                 </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="ajout_site.php"> Ajouter site </a>
+                </li>
                  <li class="nav-item active">
                 <a class="nav-link" href="deconnexion.php"> Deconnexion </a>
                 </li>
+
                 <!-- commentaire -->
             </ul>
         </div>

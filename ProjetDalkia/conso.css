@@ -1,0 +1,30 @@
+.bar {
+  fill: #0d3266;
+}
+
+.bar:hover {
+  fill: #ef5716 ;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #0d3266;
+  shape-rendering: crispEdges;
+}
+
+.formulaire{
+			position: absolute;
+			left: 37%;
+			margin-top: 50px;
+}
+
+.figure{
+			position: absolute;
+			left: 27%;
+			margin-top: 30%;
+}

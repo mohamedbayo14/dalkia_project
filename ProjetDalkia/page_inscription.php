@@ -78,7 +78,7 @@
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="nom">Nom</label>
                     <!-- Vérifie que le champ de texte à bien été remplie-->
-                    <input class="form-control col-sm-8  required">  
+                    <input class="form-control col-sm-8  required" placeholder="Votre nom" name="nom" id="nom">  
                 </div>
             </section>
             <section>
@@ -86,7 +86,7 @@
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="prenom">Prénom</label>
                     <!-- Vérifie que le champ de texte à bien été remplie-->
-                    <input class="form-control col-sm-8  required">
+                    <input class="form-control col-sm-8  required" placeholder="Votre prénom" name="prenom" id="prenom">
                     
                 </div>
             </section>

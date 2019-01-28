@@ -29,8 +29,8 @@ while ($donnees = $reponse->fetch())
 } 
 
 
-require_once ('C:\Users\marti\Desktop\cours 3A-IF\DalkiaProjet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
-require_once ('C:\Users\marti\Desktop\cours 3A-IF\DalkiaProjet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
+require_once ('C:\wamp64\www\Ping\projet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
+require_once ('C:\wamp64\www\Ping\projet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
 $bdd=new PDO('mysql:host=localhost;dbname=dalkia_database','root','', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   
 //Calcul du cout de la solution dalkia
@@ -149,12 +149,23 @@ $p3 = new LinePlot($datay3);
 //$p5 = new LinePlot($Quantité_gaz_janvier);
 //$p6 = new LinePlot($Quantité_fioul_janvier);
 $graph->Add($p1);
+$p1->SetColor("#6495ED");//solution dalk ia
+
 $graph->Add($p2);
+$p2->SetColor("#221515");//fioul
+
 $graph->Add($p3);
+$p2->SetColor("#c3bfbf");//gaz
+
 //$graph->Add($p4);
-$p1->SetColor("#6495ED");
-$p2->SetColor("#221515");
-$p2->SetColor("#c3bfbf");
+
+
+
+
+/*légende*/
+
+
+
 $graph->legend->SetFrameWeight(1);
 
 // Output line
