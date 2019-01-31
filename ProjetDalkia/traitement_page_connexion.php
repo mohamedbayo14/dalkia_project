@@ -13,7 +13,8 @@ while ($donnees = $requete->fetch())// on sort les informations de la base de do
 }  
 
 if (!isset($password)){
-   header('location: page_connexion.php');
+    echo "<script type='text/javascript'>alert('Mauvais identifiant/mot de passe ou compte non validé')</script>";
+    echo "<script type='text/javascript'>document.location.replace('page_connexion.php');</script>";
 }
 
 
