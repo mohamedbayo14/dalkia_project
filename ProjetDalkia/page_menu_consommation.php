@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
        <?php
 /* Définition de la variable titre pour la page d'accueil */
-      $titre_page="Inscription";
+      $titre_page="consommation";
       /* Inclusion de l'en-têtre */
       include 'header.php';?>
       <!-- Appel du header -->
@@ -51,7 +51,7 @@
 
 
        <br />
-        <form method="POST" action="traitement_consommation.php">
+        <form method="POST" action="page_menu_consommation.inc.php">
             <h2 id="contactForm">Page de consommation</h2>
             <fieldset>
                 <br>
