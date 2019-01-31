@@ -86,16 +86,16 @@
         <!-- Renvoie à la page traitement_page_connexion.php lors de l'appuie sur le bouton si toute les conditions ont été respecté -->
         <form method="POST" action="traitement_page_connexion.php">
             <section>
-                <h4 class="formtitle">Identification</h4>
+                <h4 class="formtitle">Email</h4>
                 <fieldset>
                     <div class="form-group">
                         <div class="form-row">
-                            <label class="col-sm-4" for="identifiant">Identifiant</label>
+                            <label class="col-sm-4" for="identifiant">Email</label>
                             <!-- Verifie que le champ à bien été remplie -->
                             <input class="form-control col-sm-8
                                           <?php if ($erreur_feedback){echo isset($_SESSION['identifiant_erreur'])? 'is-invalid' : 'is-valid' ; }
                                           ?>
-                                          " type="POST" id="identifiant" name="identifiant" placeholder="Votre identifiant"
+                                          " type="POST" id="identifiant" name="identifiant" placeholder="Votre email"
                                           <?php if (isset($_SESSION['courriel'])){echo $_SESSION['identifiant'];}
                                           ?> required>
                             <!-- Verifie que le champ à bien été remplie et que c'est bien une adresse email -->

@@ -17,10 +17,7 @@
                 </li>
                 <li class="nav-item active">
                 <a class="nav-link" href="conso_annuelle.php"> Consommation annuelle </a>
-                </li>
-                 <li class="nav-item active">
-                <a class="nav-link" href="main_page.php">Prevision </a>
-                </li>   
+                </li> 
                  <li class="nav-item active">
                 <a class="nav-link" href="page_modification.php">Modification </a>
                 </li>

@@ -13,11 +13,11 @@ catch(Exception $e)
 
 $id=$_SESSION['id'];
 //requête sql pour modifier des données
-$requete = $bdd->prepare('UPDATE identification SET identifiant=?, mdp=?, mail=? WHERE id_identification=?');
+$requete = $bdd->prepare('UPDATE identification SET mdp=?, mail=? WHERE id_identification=?');
 //recherche des valeurs dans les champs de textes et dans la variables de sessions
-$requete->execute(array($_POST['identifiant'],md5($_POST['pass']),$_POST['courriel'],$id));
+$requete->execute(array(md5($_POST['pass']),$_POST['courriel'],$id));
 
 //message de confirmation
-echo "<script type='text/javascript'>alert('Votre incription a été envoyé au administrateur. Veuillez attendre vos droits de connexion')</script>";
+echo "<script type='text/javascript'>alert('Votre identifiant et votre mot de passe ont bien été modifiés')</script>";
 echo "<script type='text/javascript'>document.location.replace('page_menu_consommation.php');</script>";
 ?>

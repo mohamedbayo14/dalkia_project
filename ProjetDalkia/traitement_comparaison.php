@@ -25,7 +25,6 @@ while ($donnees = $reponse->fetch())
     $octobre= intval($donnees["octobre"]);   
     $novembre= intval($donnees["novembre"]);   
     $decembre= intval($donnees["decembre"]);
-
 } 
 
 

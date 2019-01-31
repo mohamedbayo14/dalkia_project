@@ -82,17 +82,17 @@
                 </div>
             </fieldset> 
             <section>
-                <h4 class="formtitle">R1 (HT/MWH)*</h4>
+                <h4 class="formtitle">R1 (HT/MWh)*</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="R1">R1</label>
-                    <input class="form-control col-sm-8" id="R1" name="R1" placeholder="R1 (HT/MWH)" required>
+                    <input class="form-control col-sm-8" id="R1" name="R1" placeholder="R1 (HT/MWh)" required>
                 </div>
             </section>
             <section>
-                <h4 class="formtitle">R2 (HT/KWH)*</h4>
+                <h4 class="formtitle">R2 (HT/kWh)*</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="R2">R2</label>
-                    <input class="form-control col-sm-8" id="R2" name="R2" placeholder="R2 (HT/KWH)" required>
+                    <input class="form-control col-sm-8" id="R2" name="R2" placeholder="R2 (HT/kWh)" required>
                 </div>
                 <h4 class="formtitle">Rendement chaudiere Gaz*</h4>
                 <div class="form-group form-row">
@@ -109,10 +109,10 @@
                     <label class="col-sm-4" for="Prix_fioul">Prix_fioul</label>
                     <input class="form-control col-sm-8" id="Prix_fioul" name="Prix_fioul" placeholder="Prix de l'HL de fioul" required>
                 </div>
-                <h4 class="formtitle">Prix MWH gaz*</h4>
+                <h4 class="formtitle">Prix MWh gaz*</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="Prix_gaz">Prix_gazL</label>
-                    <input class="form-control col-sm-8" id="Prix_gaz" name="Prix_gaz" placeholder="Prix du MWH de gaz" required>
+                    <input class="form-control col-sm-8" id="Prix_gaz" name="Prix_gaz" placeholder="Prix du MWh de gaz" required>
                 </div>
                 <h4 class="formtitle">PCI Fioul*</h4>
                 <div class="form-group form-row">

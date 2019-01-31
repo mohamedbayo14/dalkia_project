@@ -30,7 +30,7 @@
         {
             /*text-align: center;*/
             position: absolute;
-            left: 37%;
+            left: 34%;
              background:#F9F9F9;
              opacity: 0.75;
              padding: 25px;
@@ -49,48 +49,28 @@
 
 <br>
 <!-- Donne les droits d'accès à une personne inscrite de la liste déroulante lorsqu'on appuie sur le bouton valider -->
-<form method="POST" action="traitement_droit_acces.php">      
-<section>
-        <div class="row">
-        <div class="col-lg-8">
-        <br>
-        <br>
-
-                <h4 class="formtitle">Donner droit d'utilisateur</h4>
-    <fieldset>
-    <div class="form-group">
-        <div class="form-row">
-           <p>Choisir un nom</p>
-        </div>
-    </div>                
-    <div class="form-group">
-        <div class="form-row">
-            <!-- appel de la liste déroulante -->
-           <?php include('liste_deroulante_non_inscrit.php'); ?>
-        </div>
-    </div>
-    </fieldset>                
-                    
-        </div>
-        </div>
-    <div class="row">
-        <div class="col-lg-8">
-        <br>
-          
-        </div></div>
-     <div class="Graph">
-           <p> <button class="btn btn-primary" type="submit" name="valid_contact">Valider</button> </p>
+        <form method="POST" action="traitement_droit_acces.php">
+            <h2 id="contactForm">Donner les droits d'utilisateur</h2>
+            <fieldset>
+                <br>
+                <div class="form-group">
+                    <div class="form-row">
+                        <p>Choisir un nom</p>
+                    </div>
+                </div>                
+                <div class="form-group">
+                    <div class="form-row">
+                        <!-- Appel de la liste déroulante -->
+                        <?php include('liste_deroulante_non_inscrit.php'); ?>
+                    </div>
+                </div>
+            </fieldset> 
+            
+            
+            <br>
+            <center><p> <button class="btn btn-primary " type="submit" name="valid_contact">Valider</button> </p></center>
            
-        
-    
-     
-     </div>
-    
- 
-
-
-    </section>
-</form>
+        </form>
 
 
 

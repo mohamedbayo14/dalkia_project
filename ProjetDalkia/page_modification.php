@@ -69,29 +69,29 @@
         <!-- Met à jour la base de donnée en appuyant sur le bouton -->
         <form method="POST" action="traitement_modification.php">
             <section>
-                <h4 class="formtitle">Identifiant de connexion*</h4>
+                <h4 class="formtitle">Mail de connexion</h4>
                 <div class="form-group form-row">
-                    <label class="col-sm-4" for="nom">identifiant</label>
-                    <input class="form-control col-sm-8" id="identifiant" name="identifiant" placeholder="Votre identifiant..." required>
+                    <label class="col-sm-4" for="nom">Adresse mail</label>
+                    <input class="form-control col-sm-8" id="identifiant" name="identifiant" placeholder="adresse mail..." required>
                 </div>
             </section>
             <section>
-                <h4 class="formtitle">Votre e-mail*</h4>
+                <h4 class="formtitle">Votre nouvel e-mail</h4>
                 <fieldset>
                     <div class="form-group">
                         <div class="form-row">
-                            <label class="col-sm-4" for="courriel">Adresse de courriel</label>
+                            <label class="col-sm-4" for="courriel">nouveau courriel</label>
                             <input class="form-control col-sm-8 " type="email" id="courriel" name="courriel" placeholder="xxx@gmail.com">
                         </div>
                     </div>
                 </fieldset>
             </section>
-                <h4 class="formtitle">Mot de passe*</h4>
+                <h4 class="formtitle">Nouveau mot de passe</h4>
                 <fieldset>
                     <div class="form-group">
                         <div class="form-row">
                             <label class="col-sm-4" for="password">Password</label>
-                            <input class="form-control col-sm-8 " type="password" id="pass" name="pass" placeholder="Votre password">
+                            <input class="form-control col-sm-8 " type="password" id="pass" name="pass" placeholder="nouveau mot de passe">
                         </div>
                     </div>
                 </fieldset>

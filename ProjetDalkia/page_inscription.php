@@ -73,25 +73,9 @@
         </div>
     </section>
             
+
             <section>
-                <h4 class="formtitle">Nom*</h4>
-                <div class="form-group form-row">
-                    <label class="col-sm-4" for="nom">Nom</label>
-                    <!-- Vérifie que le champ de texte à bien été remplie-->
-                    <input class="form-control col-sm-8  required" placeholder="Votre nom" name="nom" id="nom">  
-                </div>
-            </section>
-            <section>
-                <h4 class="formtitle">Prénom*</h4>
-                <div class="form-group form-row">
-                    <label class="col-sm-4" for="prenom">Prénom</label>
-                    <!-- Vérifie que le champ de texte à bien été remplie-->
-                    <input class="form-control col-sm-8  required" placeholder="Votre prénom" name="prenom" id="prenom">
-                    
-                </div>
-            </section>
-            <section>
-                <h4 class="formtitle">Votre e-mail*</h4>
+                <h4 class="formtitle">Votre e-mail</h4>
                 <fieldset>
                     <div class="form-group">
                         <div class="form-row">
@@ -104,35 +88,10 @@
                     </div>
                 </fieldset>
             </section>
-            <section>
-                <h4 class="formtitle">Localisation*</h4>
-                <fieldset>
-                    <div class="form-group">
-                        <div class="form-row">
-                            <label class="col-sm-4" for="localisation">Adresse</label>
-                            <!-- Vérifie que le champ de texte à bien été remplie-->
-                            <input class="form-control col-sm-8
-                                          " type="POST" id="lieu" name="lieu" placeholder="Votre adresse" required>
-                        </div>
-                    </div>
-                </fieldset>
-            </section>   
-            <section>
-                <h4 class="formtitle">Identification*</h4>
-                <fieldset>
-                    <div class="form-group">
-                        <div class="form-row">
-                            <label class="col-sm-4" for="identifiant">Identifiant</label>
-                            <!-- Vérifie que le champ de texte à bien été remplie-->
-                            <input class="form-control col-sm-8
-                                          " type="POST" id="identifiant" name="identifiant" placeholder="Votre identifiant"
-                                           required>
-                        </div>
-                    </div>
-                </fieldset>
-            </section>  
+ 
+
             
-                <h4 class="formtitle">Mot de passe*</h4>
+                <h4 class="formtitle">Mot de passe</h4>
                 <fieldset>
                     <div class="form-group">
                         <div class="form-row">

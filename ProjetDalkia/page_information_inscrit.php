@@ -42,19 +42,16 @@
 }>
 <!-- Création des colonnes -->
 <tr>
-    <th><p class="text-error">Nom</p></th>
-    <th><p class="text-error">Prénom</p></th>
+
     <th><p class="text-error">Adresse mail</p></th>
-    <th><p class="text-error">Lieu</p></th>
     <th><p class="text-error">Statut</p></th>
 </tr>
 <tr>
 <!-- Remplissage du tableau en fonction des données resorties de la base de données -->
 <?php while($row = $req->fetch()) { ?>
-        <td><?php echo $row['nom']; ?></td>
-        <td><?php echo $row['prenom']; ?></td>
+        
         <td><?php echo $row['mail']; ?></td>
-        <td><?php echo $row['lieu']; ?></td>
+       
         <td><?php echo $row['statut']; ?></td>
 </tr>
 <?php }   
