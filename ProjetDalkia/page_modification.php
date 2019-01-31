@@ -11,7 +11,11 @@
       include 'header.php';?>
       <!-- Appel de du header -->
       <?php include 'header_commercial.php';?>
-      <?php session_start();   ?>
+      <?php session_start();    
+      if (!isset($_SESSION['id'])) {
+         // pas loguer
+        header('location: page_connexion.php');
+}?>
 
       
       if(empty($_SESSION)) { session_start(); if(! isset($_SESSION['ouvert'])) { header("Location : /login.php"); } }

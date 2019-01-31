@@ -10,8 +10,13 @@
       $titre_page="Inscription";
       /* Inclusion de l'en-têtre */
       include 'header.php';?>
+        <?php session_start(); ?>
       <!-- appel du header-->
-      <?php include 'header_admin.php';?>
+      <?php include 'header_admin.php';
+         if (!isset($_SESSION['id'])) {
+         // pas loguer
+        header('location: page_connexion.php');
+}?>
    
   </head>
 </head>

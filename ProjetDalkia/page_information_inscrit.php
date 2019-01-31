@@ -13,7 +13,11 @@
       <?php include 'header_admin.php';?>
       <?php session_start();   ?>
       <!-- appel de la page traitement_information_inscrit.php qui va permettre de créer le tableau  -->
-      <?php include('traitement_information_inscrit.php'); ?> 
+      <?php include('traitement_information_inscrit.php'); 
+         if (!isset($_SESSION['id'])) {
+         // pas loguer
+        header('location: page_connexion.php');
+}?> 
       
       
 

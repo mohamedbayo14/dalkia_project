@@ -25,11 +25,12 @@ while ($donnees = $reponse->fetch())
     $octobre= intval($donnees["octobre"]);   
     $novembre= intval($donnees["novembre"]);   
     $decembre= intval($donnees["decembre"]);
+
 } 
 
 
-require_once ('C:\wamp64\www\Ping\projet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
-require_once ('C:\wamp64\www\Ping\projet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
+require_once ('C:\wamp64\www\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
+require_once ('C:\wamp64\www\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
 $bdd=new PDO('mysql:host=localhost;dbname=dalkia_database','root','', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   
 //Calcul du cout de la solution dalkia
@@ -111,6 +112,14 @@ $datay1 = array($Cout_janvier,$Cout_fevrier,$Cout_mars,$Cout_avril,$Cout_mai,$Co
 $datay2 = array($Cout_fioul_janvier,$Cout_fioul_fevrier,$Cout_fioul_mars,$Cout_fioul_avril,$Cout_fioul_mai,$Cout_fioul_juin,$Cout_fioul_juillet,$Cout_fioul_aout,$Cout_fioul_septembre,$Cout_fioul_octobre,$Cout_fioul_novembre,$Cout_fioul_decembre);
 $datay3 = array($Cout_gaz_janvier,$Cout_gaz_fevrier,$Cout_gaz_mars,$Cout_gaz_avril,$Cout_gaz_mai,$Cout_gaz_juin,$Cout_gaz_juillet,$Cout_gaz_aout,$Cout_gaz_septembre,$Cout_gaz_octobre,$Cout_gaz_novembre,$Cout_gaz_decembre);
 
+$Cout_gaz=-($Cout_gaz_janvier+$Cout_gaz_fevrier+$Cout_gaz_mars+$Cout_gaz_avril+$Cout_gaz_mai+$Cout_gaz_juin+$Cout_gaz_juillet+$Cout_gaz_aout+$Cout_gaz_septembre+$Cout_gaz_octobre+$Cout_gaz_novembre+$Cout_gaz_decembre);
+
+$Cout_fioul=-($Cout_fioul_janvier+$Cout_fioul_fevrier+$Cout_fioul_mars+$Cout_fioul_avril+$Cout_fioul_mai+$Cout_fioul_juin+$Cout_fioul_juillet+$Cout_fioul_aout+$Cout_fioul_septembre+$Cout_fioul_octobre+$Cout_fioul_novembre+$Cout_fioul_decembre);
+
+$Comparaison_dalkia_fioul=($Cout_dalkia-$Cout_fioul)/$Cout_fioul;
+$Comparaison_dalkia_gaz=($Cout_dalkia-$Cout_gaz)/$Cout_gaz;
+
+
 
 // Setup the graph
 $graph = new Graph(1000,400);
@@ -148,23 +157,12 @@ $p3 = new LinePlot($datay3);
 //$p5 = new LinePlot($Quantité_gaz_janvier);
 //$p6 = new LinePlot($Quantité_fioul_janvier);
 $graph->Add($p1);
-$p1->SetColor("#6495ED");//solution dalk ia
-
 $graph->Add($p2);
-$p2->SetColor("#221515");//fioul
-
 $graph->Add($p3);
-$p2->SetColor("#c3bfbf");//gaz
-
 //$graph->Add($p4);
-
-
-
-
-/*légende*/
-
-
-
+$p1->SetColor("#6495ED");
+$p2->SetColor("#221515");
+$p2->SetColor("#c3bfbf");
 $graph->legend->SetFrameWeight(1);
 
 // Output line

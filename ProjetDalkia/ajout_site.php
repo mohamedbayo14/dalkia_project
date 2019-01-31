@@ -8,6 +8,11 @@
       include 'header.php';?>
       <!-- Appel du header -->
       <?php include 'header_commercial.php';?>
+    <?php session_start();  
+         if (!isset($_SESSION['id'])) {
+         // pas loguer
+        header('location: page_connexion.php');
+}?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,12 +93,12 @@
                 <input type="text" name="R1_2014" placeholder="R1 2014"/>
                 <input type="text" name="R2_2014" placeholder="R2 2014"/>
                 <input type="text" name="R1R2_2014" placeholder="R1+R2 2014"/>
-                <input type="text" name="R1_2015_1st" placeholder="R1 2015 1st periode"/>
-                <input type="text" name="R2_2015_1st" placeholder="R2 2015 1st periode"/>
-                <input type="text" name="R1R2_2015_1st" placeholder="R1+R2 2015 1st periode"/>
-                <input type="text" name="R1_2015_2nde" placeholder="R1 2015 2nde periode"/>
-                <input type="text" name="R2_2015_2nde" placeholder="R2 2015 2nde periode"/>
-                <input type="text" name="R1R2_2015_2nde" placeholder="R1+R2 2015 2nde periode"/>
+                <input type="text" name="R1_2015_1st" placeholder="R1 2015 1ère période"/>
+                <input type="text" name="R2_2015_1st" placeholder="R2 2015 1ère période"/>
+                <input type="text" name="R1R2_2015_1st" placeholder="R1+R2 2015 1ère période"/>
+                <input type="text" name="R1_2015_2nde" placeholder="R1 2015 2nde période"/>
+                <input type="text" name="R2_2015_2nde" placeholder="R2 2015 2nde période"/>
+                <input type="text" name="R1R2_2015_2nde" placeholder="R1+R2 2015 2nde période"/>
                 <input type="text" name="R1R2_2015" placeholder="R1+R2 2015"/>
                 <input type="text" name="R1_2016" placeholder="R1 2016"/>
                 <input type="text" name="R2_2016" placeholder="R2 2016"/>

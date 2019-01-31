@@ -31,8 +31,14 @@
       $titre_page="conso_annuelle";
       /* Inclusion de l'en-têtre */
       include 'header.php';?>
+            <?php session_start();  
+         if (!isset($_SESSION['id'])) {
+         // pas loguer
+        header('location: page_connexion.php');
+}?>
       <!-- Appel du header -->
       <?php include 'header_commercial.php';?>
+
     <meta charset="utf-8">
 
 	<!-- Bootstrap -->

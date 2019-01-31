@@ -10,7 +10,12 @@
       /* Inclusion de l'en-têtre */
       include 'header.php';?>
       <?php include 'header_commercial.php';?>
-      <?php session_start();   ?>
+      <?php session_start();   
+        if (!isset($_SESSION['id'])) {
+         // pas loguer
+        header('location: page_connexion.php');
+}
+      ?>
 
       <title>page inscription</title>
     
@@ -54,7 +59,6 @@
         }
         
     </style>
-    <p1> *Champ obligatoire à remplir </p1>
     <br/>
     <section>
         <div class="row">
@@ -82,59 +86,59 @@
                 </div>
             </fieldset> 
             <section>
-                <h4 class="formtitle">R1 (HT/MWh)*</h4>
+                <h4 class="formtitle">R1 (HT/MWh)</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="R1">R1</label>
                     <input class="form-control col-sm-8" id="R1" name="R1" placeholder="R1 (HT/MWh)" required>
                 </div>
             </section>
             <section>
-                <h4 class="formtitle">R2 (HT/kWh)*</h4>
+                <h4 class="formtitle">R2 (HT/kWh)</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="R2">R2</label>
                     <input class="form-control col-sm-8" id="R2" name="R2" placeholder="R2 (HT/kWh)" required>
                 </div>
-                <h4 class="formtitle">Rendement chaudiere Gaz*</h4>
+                <h4 class="formtitle">Rendement chaudière Gaz</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="R_GAZ">R_GAZ</label>
-                    <input class="form-control col-sm-8" id="R_GAZ" name="R_GAZ" placeholder="Rendement chaudiere Gaz" required>
+                    <input class="form-control col-sm-8" id="R_GAZ" name="R_GAZ" placeholder="Rendement chaudière Gaz" required>
                 </div>
-                <h4 class="formtitle">Rendement chaudiere Fioul*</h4>
+                <h4 class="formtitle">Rendement chaudière Fioul</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="R_FIOUL">R_FIOUL</label>
-                    <input class="form-control col-sm-8" id="R_FIOUL" name="R_FIOUL" placeholder="Rendement chaudiere Fioul" required>
+                    <input class="form-control col-sm-8" id="R_FIOUL" name="R_FIOUL" placeholder="Rendement chaudière Fioul" required>
                 </div>
-                <h4 class="formtitle">Prix HL de fioul*</h4>
+                <h4 class="formtitle">Prix HL de fioul</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="Prix_fioul">Prix_fioul</label>
                     <input class="form-control col-sm-8" id="Prix_fioul" name="Prix_fioul" placeholder="Prix de l'HL de fioul" required>
                 </div>
-                <h4 class="formtitle">Prix MWh gaz*</h4>
+                <h4 class="formtitle">Prix MWh gaz</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="Prix_gaz">Prix_gazL</label>
                     <input class="form-control col-sm-8" id="Prix_gaz" name="Prix_gaz" placeholder="Prix du MWh de gaz" required>
                 </div>
-                <h4 class="formtitle">PCI Fioul*</h4>
+                <h4 class="formtitle">PCI Fioul</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="PCI_FIOUL">PCI_FIOUL</label>
                     <input class="form-control col-sm-8" id="PCI_FIOUL" name="PCI_FIOUL" placeholder="PCI FIOUL" required>
                 </div>
-                <h4 class="formtitle">PCI GAZ*</h4>
+                <h4 class="formtitle">PCI GAZ</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="PCI_GAZ">PCI_GAZ</label>
                     <input class="form-control col-sm-8" id="PCI_GAZ" name="PCI_GAZ" placeholder="PCI GAZ" required>
                 </div>
-                <h4 class="formtitle">P2 supposé*</h4>
+                <h4 class="formtitle">P2 supposé</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="P2_sup">P2 sup</label>
                     <input class="form-control col-sm-8" id="P2_sup" name="P2_sup" placeholder="P2 supposé" required>
                 </div>
-                <h4 class="formtitle">P3 supposé*</h4>
+                <h4 class="formtitle">P3 supposé</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="P3_sup">P3 sup</label>
                     <input class="form-control col-sm-8" id="P3_sup" name="P3_sup" placeholder="P3 supposé" required>
                 </div>
-                <h4 class="formtitle">TVA P2/P3*</h4>
+                <h4 class="formtitle">TVA P2/P3</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="TVA">TVA</label>
                     <input class="form-control col-sm-8" id="TVA" name="TVA" placeholder="TVA pour le P2/P3" required>

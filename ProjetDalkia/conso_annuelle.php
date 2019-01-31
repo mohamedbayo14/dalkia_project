@@ -13,7 +13,12 @@
       /* Inclusion de l'en-têtre */
       include 'header.php';?>
       <!-- Appel du header -->
-      <?php include 'header_commercial.php';?>
+      <?php include 'header_commercial.php'; ?>
+    <?php session_start();  
+         if (!isset($_SESSION['id'])) {
+         // pas loguer
+        header('location: page_connexion.php');
+}?>
     <meta charset="utf-8">
 
 	<!-- Bootstrap -->
