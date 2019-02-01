@@ -22,7 +22,7 @@
         
     body
     {
-     background-image: url("photo/fjord.jpg");
+     background-image: url("photo/photo-paysage-cuba-mer-turquoise-01.jpg");
      background-size: cover
 
     }

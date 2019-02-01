@@ -46,6 +46,7 @@
 </head>
 <body>
         <style>
+
         body
         {
              background-image: url("./photo/conso.jpg");
