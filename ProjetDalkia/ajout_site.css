@@ -1,5 +1,5 @@
 /*custom font*/
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
 * {
@@ -9,20 +9,22 @@
 
 html {
     height: 100%;
-    background: #6441A5; /* fallback for old browsers */
+    background-image: url("photo/landscape.jpg");
+   /*background: #0a3064;*/ /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #6441A5, #2a0845); /* Chrome 10-25, Safari 5.1-6 */
 }
 
 body {
     font-family: montserrat, arial, verdana;
     background: transparent;
+    background-image: url("dalkia.jpg");
 }
 
 /*form styles*/
 #msform {
     text-align: center;
     position: relative;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 #msform fieldset {
@@ -72,7 +74,7 @@ body {
 /*buttons*/
 #msform .action-button {
     width: 100px;
-    background: #ee0979;
+    background: #eb5d0e;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -83,7 +85,7 @@ body {
 }
 
 #msform .action-button:hover, #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #eb5d0e;
 }
 
 #msform .action-button-previous {
@@ -132,7 +134,7 @@ body {
     color: white;
     text-transform: uppercase;
     font-size: 9px;
-    width: 33.33%;
+    width: 25%;
     float: left;
     position: relative;
     letter-spacing: 1px;
@@ -172,13 +174,17 @@ body {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before, #progressbar li.active:after {
-    background: #ee0979;
+    background: #eb5d0e;
     color: white;
 }
 
+h1{
+    color: white;
+    text-align: center;
+}
 
 /* Not relevant to this form */
-.dme_link {
+/*.dme_link {
     margin-top: 30px;
     text-align: center;
 }
@@ -196,4 +202,4 @@ body {
 .dme_link a:hover, .dme_link a:focus {
     background: #C5C5F1;
     text-decoration: none;
-}
+}*/

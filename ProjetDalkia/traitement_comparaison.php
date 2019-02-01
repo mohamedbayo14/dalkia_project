@@ -11,6 +11,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <style>
+        
+        
+
+        h2
+        {
+            text-align: center;
+            color: white;
+        }
+        body
+        {
+           background-image: url("photo/landscape.jpg");
+           background-size: cover
+        }
         html, body {
             width: 100%;
             height: 100%;
@@ -18,8 +31,12 @@
         }
 
         #chartdiv {
-            width: 100%;
-            height: 100%;
+            width: 70%;
+            height: 500px;
+            background:#F9F9F9;
+            opacity: 0.75;
+            padding: 25px;
+            margin: auto;
         }
     </style>
 
@@ -28,8 +45,13 @@
     <script src="//www.amcharts.com/lib/3/themes/light.js"></script>
 </head>
 <body>
+    <br>
+    <h2>Courbes de comparaison</h2>
+    <br><br>
     <div id="chartdiv"></div>
-    <button type="button" class="btn btn-primary">Retour</button>
+    <a href="page_comparaison.php">
+        <button type="button" class="btn btn-success">Retour</button>
+    </a>
 </body>
 </html>
 
@@ -294,7 +316,7 @@ var chart = AmCharts.makeChart("chartdiv", {
     "category": "Juin",
     "value1": datay1[5],
     "value2": datay2[5],
-    "value3": datay2[5]
+    "value3": datay3[5]
   }, {
     "category": "Juillet",
     "value1": datay1[6],
@@ -329,7 +351,8 @@ var chart = AmCharts.makeChart("chartdiv", {
   "valueAxes": [{
     "gridColor": "#FFFFFF",
     "gridAlpha": 0.2,
-    "dashLength": 0
+    "dashLength": 0,
+    "title": "Coûts"
   }],
   "gridAboveGraphs": true,
   "startDuration": 1,

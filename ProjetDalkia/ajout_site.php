@@ -26,7 +26,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <!-- Custom styles -->
-    <link href="BS_MultiStep_Form_Snippet/BS-MultiStepForm/assets/multistepform/css/style.css" rel="stylesheet">
+    <link href="ajout_site.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
