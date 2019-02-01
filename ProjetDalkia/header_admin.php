@@ -18,7 +18,10 @@
                 </li>
                  <li class="nav-item active">
                 <a class="nav-link" href="page_droit_acces.php">Droit d'accès </a>
-                </li>          
+                </li>  
+                <li class="nav-item active">
+                <a class="nav-link" href="supprimer.php">Retrait droit d'accès </a>
+                </li>           
                  <li class="nav-item active">
                 <a class="nav-link" href="deconnexion.php"> Deconnexion </a>
                 </li>

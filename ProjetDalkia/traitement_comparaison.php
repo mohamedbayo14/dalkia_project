@@ -1,3 +1,32 @@
+<!Doctype>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparaison</title>
+    <meta charset="utf-8">
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+
+        #chartdiv {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script src="//www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="//www.amcharts.com/lib/3/serial.js"></script>
+    <script src="//www.amcharts.com/lib/3/themes/light.js"></script>
+</head>
+<body>
+    <div id="chartdiv"></div>
+</body>
+</html>
+
 <?php
 
 try
@@ -29,8 +58,8 @@ while ($donnees = $reponse->fetch())
 } 
 
 
-require_once ('C:\wamp64\www\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
-require_once ('C:\wamp64\www\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
+/*require_once ('C:\wamp64\www\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
+require_once ('C:\wamp64\www\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');*/
 $bdd=new PDO('mysql:host=localhost;dbname=dalkia_database','root','', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   
 //Calcul du cout de la solution dalkia
@@ -116,12 +145,12 @@ $Cout_gaz=-($Cout_gaz_janvier+$Cout_gaz_fevrier+$Cout_gaz_mars+$Cout_gaz_avril+$
 
 $Cout_fioul=-($Cout_fioul_janvier+$Cout_fioul_fevrier+$Cout_fioul_mars+$Cout_fioul_avril+$Cout_fioul_mai+$Cout_fioul_juin+$Cout_fioul_juillet+$Cout_fioul_aout+$Cout_fioul_septembre+$Cout_fioul_octobre+$Cout_fioul_novembre+$Cout_fioul_decembre);
 
-$Comparaison_dalkia_fioul=($Cout_dalkia-$Cout_fioul)/$Cout_fioul;
-$Comparaison_dalkia_gaz=($Cout_dalkia-$Cout_gaz)/$Cout_gaz;
+$Comparaison_dalkia_fioul=($Cout_Dalkia-$Cout_fioul)/$Cout_fioul;
+$Comparaison_dalkia_gaz=($Cout_Dalkia-$Cout_gaz)/$Cout_gaz;
 
 
 
-// Setup the graph
+/*// Setup the graph
 $graph = new Graph(1000,400);
 $graph->SetScale("textlin");
 
@@ -144,19 +173,19 @@ $graph->xgrid->Show();
 $graph->xgrid->SetLineStyle("solid");
 $graph->xaxis->SetTickLabels(array('Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'));
 $graph->xgrid->SetColor('#E3E3E3');
-
+*/
 //echo $Cout_Dalkia;
 //echo $Quantité_gaz_janvier;
 //echo $Quantité_fioul_janvier;
 
 // Create the first line
-$p1 = new LinePlot($datay1);
+/*$p1 = new LinePlot($datay1);
 $p2 = new LinePlot($datay2);
-$p3 = new LinePlot($datay3);
+$p3 = new LinePlot($datay3);*/
 
 //$p5 = new LinePlot($Quantité_gaz_janvier);
 //$p6 = new LinePlot($Quantité_fioul_janvier);
-$graph->Add($p1);
+/*$graph->Add($p1);
 $graph->Add($p2);
 $graph->Add($p3);
 //$graph->Add($p4);
@@ -164,8 +193,179 @@ $p1->SetColor("#6495ED");
 $p2->SetColor("#221515");
 $p2->SetColor("#c3bfbf");
 $graph->legend->SetFrameWeight(1);
-
+*/
 // Output line
-$graph->Stroke();
-
+/*$graph->Stroke();
+*/
 ?>
+
+<script>
+
+var Cout_janvier = '<?php echo $Cout_janvier; ?>' ;
+var Cout_fevrier = '<?php echo $Cout_fevrier; ?>' ;
+var Cout_mars = '<?php echo $Cout_mars; ?>' ;
+var Cout_avril = '<?php echo $Cout_avril; ?>' ;
+var Cout_mai = '<?php echo $Cout_mai; ?>' ;
+var Cout_juin = '<?php echo $Cout_juin; ?>' ;
+var Cout_juillet = '<?php echo $Cout_juillet; ?>' ;
+var Cout_aout = '<?php echo $Cout_aout; ?>' ;
+var Cout_septembre = '<?php echo $Cout_septembre; ?>' ;
+var Cout_octobre = '<?php echo $Cout_octobre; ?>' ;
+var Cout_novembre = '<?php echo $Cout_novembre; ?>' ;
+var Cout_decembre = '<?php echo $Cout_decembre; ?>' ;
+
+var datay1 = [];
+datay1.push(Cout_janvier, Cout_fevrier, Cout_mars, Cout_avril, Cout_mai, Cout_juin, Cout_juillet, Cout_aout, Cout_septembre, Cout_octobre, Cout_novembre, Cout_decembre);
+
+var Cout_fioul_janvier = '<?php echo $Cout_fioul_janvier; ?>' ;
+var Cout_fioul_fevrier = '<?php echo $Cout_fioul_fevrier; ?>' ;
+var Cout_fioul_mars = '<?php echo $Cout_fioul_mars; ?>' ;
+var Cout_fioul_avril = '<?php echo $Cout_fioul_avril; ?>' ;
+var Cout_fioul_mai = '<?php echo $Cout_fioul_mai; ?>' ;
+var Cout_fioul_juin = '<?php echo $Cout_fioul_juin; ?>' ;
+var Cout_fioul_juillet = '<?php echo $Cout_fioul_juillet; ?>' ;
+var Cout_fioul_aout = '<?php echo $Cout_fioul_aout; ?>' ;
+var Cout_fioul_septembre = '<?php echo $Cout_fioul_septembre; ?>' ;
+var Cout_fioul_octobre = '<?php echo $Cout_fioul_octobre; ?>' ;
+var Cout_fioul_novembre = '<?php echo $Cout_fioul_novembre; ?>' ;
+var Cout_fioul_decembre = '<?php echo $Cout_fioul_decembre; ?>' ;
+
+var datay2 = [];
+datay2.push(Cout_fioul_janvier, Cout_fioul_fevrier, Cout_fioul_mars, Cout_fioul_avril, Cout_fioul_mai, Cout_fioul_juin, Cout_fioul_juillet, Cout_fioul_aout, Cout_fioul_septembre, Cout_fioul_octobre, Cout_fioul_novembre, Cout_fioul_decembre);
+
+
+var Cout_gaz_janvier = '<?php echo $Cout_gaz_janvier; ?>' ;
+var Cout_gaz_fevrier = '<?php echo $Cout_gaz_fevrier; ?>' ;
+var Cout_gaz_mars = '<?php echo $Cout_gaz_mars; ?>' ;
+var Cout_gaz_avril = '<?php echo $Cout_gaz_avril; ?>' ;
+var Cout_gaz_mai = '<?php echo $Cout_gaz_mai; ?>' ;
+var Cout_gaz_juin = '<?php echo $Cout_gaz_juin; ?>' ;
+var Cout_gaz_juillet = '<?php echo $Cout_gaz_juillet; ?>' ;
+var Cout_gaz_aout = '<?php echo $Cout_gaz_aout; ?>' ;
+var Cout_gaz_septembre = '<?php echo $Cout_gaz_septembre; ?>' ;
+var Cout_gaz_octobre = '<?php echo $Cout_gaz_octobre; ?>' ;
+var Cout_gaz_novembre = '<?php echo $Cout_gaz_novembre; ?>' ;
+var Cout_gaz_decembre = '<?php echo $Cout_gaz_decembre; ?>' ;
+
+var datay3 = [];
+datay3.push(Cout_gaz_janvier, Cout_gaz_fevrier, Cout_gaz_mars, Cout_gaz_avril, Cout_gaz_mai, Cout_gaz_juin, Cout_gaz_juillet, Cout_gaz_aout, Cout_gaz_septembre, Cout_gaz_octobre, Cout_gaz_novembre, Cout_gaz_decembre);
+
+//var datay1 = [100,200,12,158,12,25,158,145,145,123,147,159];
+//var datay2 = [150,20,102,18,125,125,128,147,195,23,177,57];
+//var datay3 = [120,140,112,168,124,195,108,45,45,128,145,155];
+
+
+
+var chart = AmCharts.makeChart("chartdiv", {
+  "type": "serial",
+  "theme": "light",
+  "dataProvider": [{
+    "category": "Janvier",
+    "value1": datay1[0],
+    "value2": datay2[0],
+    "value3": datay3[0]
+  }, {
+    "category": "Fevrier",
+    "value1": datay1[1],
+    "value2": datay2[1],
+    "value3": datay3[1]
+  }, {
+    "category": "Mars",
+    "value1": datay1[2],
+    "value2": datay2[2],
+    "value3": datay3[2]
+  }, {
+    "category": "Avril",
+    "value1": datay1[3],
+    "value2": datay2[3],
+    "value3": datay3[3]
+  }, {
+    "category": "Mai",
+    "value1": datay1[4],
+    "value2": datay2[4],
+    "value3": datay3[4]
+  }, {
+    "category": "Juin",
+    "value1": datay1[5],
+    "value2": datay2[5],
+    "value3": datay2[5]
+  }, {
+    "category": "Juillet",
+    "value1": datay1[6],
+    "value2": datay2[6],
+    "value3": datay3[6]
+  }, {
+    "category": "Août",
+    "value1": datay1[7],
+    "value2": datay2[7],
+    "value3": datay3[7]
+  }, {
+    "category": "Septembre",
+    "value1": datay1[8],
+    "value2": datay2[8],
+    "value3": datay3[8]
+  }, {
+    "category": "Octobre",
+    "value1": datay1[9],
+    "value2": datay2[9],
+    "value3": datay3[9]
+  }, {
+    "category": "Novembre",
+    "value1": datay1[10],
+    "value2": datay2[10],
+    "value3": datay3[10]
+  }, {
+    "category": "Decembre",
+    "value1": datay1[11],
+    "value2": datay2[11],
+    "value3": datay3[11]
+  }],
+  "valueAxes": [{
+    "gridColor": "#FFFFFF",
+    "gridAlpha": 0.2,
+    "dashLength": 0
+  }],
+  "gridAboveGraphs": true,
+  "startDuration": 1,
+  "graphs": [{
+    "title": "Week #20",
+    "balloonText": "[[title]]: <b>[[value]]</b>",
+    "bullet": "round",
+    "bulletSize": 10,
+    "bulletBorderColor": "#ffffff",
+    "bulletBorderAlpha": 1,
+    "bulletBorderThickness": 2,
+    "valueField": "value1"
+  }, {
+    "title": "Week #21",
+    "balloonText": "[[title]]: <b>[[value]]</b>",
+    "bullet": "round",
+    "bulletSize": 10,
+    "bulletBorderColor": "#ffffff",
+    "bulletBorderAlpha": 1,
+    "bulletBorderThickness": 2,
+    "valueField": "value2"
+  }, {
+    "title": "Week #22",
+    "balloonText": "[[title]]: <b>[[value]]</b>",
+    "bullet": "round",
+    "bulletSize": 10,
+    "bulletBorderColor": "#ffffff",
+    "bulletBorderAlpha": 1,
+    "bulletBorderThickness": 2,
+    "valueField": "value3"
+  }],
+  "chartCursor": {
+    "categoryBalloonEnabled": false,
+    "cursorAlpha": 0,
+    "zoomable": false
+  },
+  "categoryField": "category",
+  "categoryAxis": {
+    "gridPosition": "start",
+    "gridAlpha": 0
+  },
+  "legend": {}
+});
+
+</script>
