@@ -76,7 +76,7 @@
                 <h4 class="formtitle">Mail de connexion</h4>
                 <div class="form-group form-row">
                     <label class="col-sm-4" for="nom">Adresse mail</label>
-                    <input class="form-control col-sm-8" id="identifiant" name="identifiant" placeholder="adresse mail..." required>
+                    <input class="form-control col-sm-8" id="mail_id" name="mail_id" placeholder="adresse mail..." required>
                 </div>
             </section>
             <section>

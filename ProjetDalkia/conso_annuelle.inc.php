@@ -37,7 +37,7 @@
         header('location: page_connexion.php');
 }?>
       <!-- Appel du header -->
-      <?php include 'header_commercial.php';?>
+   <?php include 'header_commercial.php';?>
 
     <meta charset="utf-8">
 
@@ -138,7 +138,6 @@ while($donnee = $requ->fetch())
 	$a2016 = $donnee['a2016'];
 	$a2017 = $donnee['a2017'];
 }
-//echo $a2011;
 ?>
 
 <script>
