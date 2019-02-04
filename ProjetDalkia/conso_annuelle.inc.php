@@ -11,12 +11,27 @@
 			left: 27%;
 			top: 50%;
 			opacity: 0.75;
-            padding: 25px;
+      padding: 25px;
 		}
 		.pie{
 			margin-left: 60%;
 			margin-top: 175px;
 		}
+    body
+    {
+      background-image: url("./photo/conso.jpg");
+      background-size: cover
+
+    }
+    form
+    {
+      /*text-align: center;*/
+      position: absolute;
+      left: 41%;
+      background:#F9F9F9;
+      opacity: 0.75;
+      padding: 25px;
+        }
 	</style>
 
 	<link rel="stylesheet" type="text/css" href="conso.css">
@@ -45,24 +60,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
 <body>
-        <style>
-
-        body
-        {
-             background-image: url("./photo/conso.jpg");
-             background-size: cover
-
-        }
-        form
-        {
-            /*text-align: center;*/
-             position: absolute;
-             left: 41%;
-             background:#F9F9F9;
-             opacity: 0.75;
-             padding: 25px;
-        }
-    </style>
     <br/>
     <br/>
     <br/>
@@ -143,6 +140,7 @@ while($donnee = $requ->fetch())
 
 <script>
 	var entreprise = '<?php echo $entreprise; ?>' ;
+  var site = '<?php echo $site; ?>' ;
 	var a2011 = '<?php echo $a2011; ?>' ;
 	a2011=a2011.replace(" ","");
 	a2011 = parseFloat(a2011);
@@ -286,7 +284,7 @@ while($donnee = $requ->fetch())
      .style("font-family", "Raleway")
      .style("font-weight", "300")
      .style("font-size", "20px")
-     .text("Répartition de la consommation sur les annees pour");
+     .text("Répartition de la consommation sur les annees pour "+ site);
     z = z + 15;
     secteurs.exit().remove();
   }

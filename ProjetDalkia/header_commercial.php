@@ -27,6 +27,9 @@
                 <li class="nav-item active">
                 <a class="nav-link" href="ajout_site.php"> Ajouter site </a>
                 </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="telechargement_graphique.php"> Téléchargements </a>
+                </li>
                  <li class="nav-item active">
                 <a class="nav-link" href="deconnexion.php"> Deconnexion </a>
                 </li>
