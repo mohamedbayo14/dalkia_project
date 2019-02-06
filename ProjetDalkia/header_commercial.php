@@ -13,25 +13,25 @@
             se navbar-collapse" id="elementsMenu">
             <ul class="navbar-nav mr-auto">
                  <li class="nav-item active">
-                <a class="nav-link" href="page_menu_consommation.php">Consommation mensuelle </a>
+                <a class="nav-link" href="page_menu_consommation.php">Conso mensuelle</a>
                 </li>
                 <li class="nav-item active">
-                <a class="nav-link" href="conso_annuelle.php"> Consommation annuelle </a>
+                <a class="nav-link" href="conso_annuelle.php">Conso annuelle</a>
                 </li> 
                  <li class="nav-item active">
-                <a class="nav-link" href="page_modification.php">Modification </a>
+                <a class="nav-link" href="page_modification.php">Modification</a>
                 </li>
                 <li class="nav-item active">
-                <a class="nav-link" href="page_comparaison.php"> Comparaison </a>
+                <a class="nav-link" href="page_comparaison.php">Comparaison</a>
                 </li>
                 <li class="nav-item active">
-                <a class="nav-link" href="ajout_site.php"> Ajouter site </a>
+                <a class="nav-link" href="ajout_site.php">Ajouter site</a>
                 </li>
                 <li class="nav-item active">
-                <a class="nav-link" href="telechargement_graphique.php"> Téléchargements </a>
+                <a class="nav-link" href="telechargement_graphique.php">Téléchargements</a>
                 </li>
                  <li class="nav-item active">
-                <a class="nav-link" href="deconnexion.php"> Deconnexion </a>
+                <a class="nav-link" href="deconnexion.php">Deconnexion</a>
                 </li>
 
                 <!-- commentaire -->
