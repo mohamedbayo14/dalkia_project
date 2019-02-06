@@ -25,14 +25,18 @@
                 <a class="nav-link" href="page_comparaison.php">Comparaison</a>
                 </li>
                 <li class="nav-item active">
-                <a class="nav-link" href="ajout_site.php">Ajouter site</a>
+                <a class="nav-link" href="ajout_site.php">Ajout site</a>
                 </li>
                 <li class="nav-item active">
-                <a class="nav-link" href="telechargement_graphique.php">Téléchargements</a>
+                <a class="nav-link" href="page_telechargement.php">Téléchargement conso</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="telechargement_graphique.php">Téléchargement images</a>
                 </li>
                  <li class="nav-item active">
-                <a class="nav-link" href="deconnexion.php">Deconnexion</a>
+                <a class="nav-link" href="deconnexion.php">Déconnexion</a>
                 </li>
+                 
 
                 <!-- commentaire -->
             </ul>

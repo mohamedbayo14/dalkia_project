@@ -52,8 +52,8 @@
             <fieldset>
                 <h2 class="fs-title">Informations sur le site</h2>  
                 <h3 class="fs-subtitle">Quelques détails sur le site</h3>
-                <input type="text" name="Entreprise" placeholder="Nom de l'entreprise"/>
-                <input type="text" name="Site" placeholder="Nom du site"/>
+                <input type="text" name="Entreprise" placeholder="Nom de l'entreprise" required />
+                <input type="text" name="Site" placeholder="Nom du site" required />
                 <input type="text" name="Habitat" placeholder="Habitat"/>
                 <input type="button" name="next" class="next action-button" value="Next"/>
             </fieldset>
@@ -63,7 +63,7 @@
                 <input type="number" name="num_sous_station" placeholder="Numéro sous station"/>
                 <input type="text" name="ps2015" placeholder="Puissance souscrite en 2015"/>
                 <input type="text" name="ps2016" placeholder="Puissance souscrite en 2016"/>
-                <input type="text" name="ps2017" placeholder="Puissance souscrite en 2017"/>
+                <input type="text" name="ps2017" placeholder="Puissance souscrite en 2017" required/>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input type="button" name="next" class="next action-button" value="Next"/>
             </fieldset>
@@ -76,7 +76,7 @@
                 <input type="text" name="cs2014" placeholder="Consommation en 2014"/>
                 <input type="text" name="cs2015" placeholder="Consommation en 2015"/>
                 <input type="text" name="cs2016" placeholder="Consommation en 2016"/>
-                <input type="text" name="cs2017" placeholder="Consommation en 2017"/>
+                <input type="text" name="cs2017" placeholder="Consommation en 2017" required/>
                 <input type="button" name="ps" class="previous action-button-previous" value="Previous"/>
                 <input type="button" name="next" class="next action-button" value="Next"/>
                 
@@ -105,8 +105,9 @@
                 <input type="text" name="R1R2_2016" placeholder="R1+R2 2016"/>
                 <input type="text" name="R1_2017" placeholder="R1 2017"/>
                 <input type="text" name="R2_2017" placeholder="R2 2017"/>
-                <input type="text" name="R1R2_2017" placeholder="R1+R2 2017"/>
+                <input type="text" name="R1R2_2017" placeholder="R1+R2 2017 required"/>
 
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input type="submit" name="submit" value="Submit"/>
             </fieldset>
         </form>

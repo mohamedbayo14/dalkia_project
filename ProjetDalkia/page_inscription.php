@@ -55,11 +55,17 @@
             top: 98px;
             left: 55px;
         }
-        
+         p2
+        {
+            
+            font-size: 10px;
+           
+        }
     </style>
     
     <br/>
-
+    
+<p2><font color = "white">Le mot de passe doit contenir au moins 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial. Taille minimale du mot de passe : 8 caractères</font></p2>
 
        <br />
         <!-- appel de la page traitement_inscription.php lorsque qu'on appuie sur le bouton validé et lorsques toutes les conditions sont respectées-->
@@ -99,8 +105,20 @@
                             <label class="col-sm-4" for="password">Password</label>
                             <!-- Vérifie que le champ de texte à bien été remplie-->
                             <input class="form-control col-sm-8
-                                          " type="password" id="pass" name="pass" placeholder="Votre password"
-                                           required>
+                                          " type="password" id="pass" name="pass"  placeholder="Votre password" onchange="form.pass_confirm = (this.value == '' ? ' : this.value);" required>
+                        </div>
+                    </div>
+                </fieldset>
+            
+            <h4 class="formtitle">Confirmation mot de passe</h4>
+                <fieldset>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <!-- Cache le mot de passe lors de la saisie-->
+                            <label class="col-sm-4" for="password">Password</label>
+                            <!-- Vérifie que le champ de texte à bien été remplie-->
+                            <input class="form-control col-sm-8
+                                          " type="password" id="pass" name="pass_confirm"  placeholder="Les mots de passe doivent être identiques" required>
                         </div>
                     </div>
                 </fieldset>
