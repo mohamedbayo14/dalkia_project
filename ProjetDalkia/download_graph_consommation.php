@@ -24,8 +24,8 @@ while ($donnees = $reponse->fetch())
     $novembre= intval($donnees["novembre"]);   
     $decembre= intval($donnees["decembre"]);
 };
-require_once ('C:\wamp64\www\Ping\projet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
-require_once ('C:\wamp64\www\Ping\projet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
+require_once ('C:\wamp64\www\ping\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
+require_once ('C:\wamp64\www\ping\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
 $bdd=new PDO('mysql:host=localhost;dbname=dalkia_database','root','', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   
 $datay1 = array($janvier,$fevrier,$mars,$avril,$mai,$juin,$juillet,$aout,$septembre,$octobre,$novembre,$decembre );
@@ -53,7 +53,7 @@ $p1->SetColor("#6495ED");
 $graph->legend->SetFrameWeight(1);
 // Output line
 $name=date("d-m-Y")."-".date("H-i")."-".$_POST['nom_entreprise'];
-$lien_telechargement = "C:\Users\bayo1\Bureau/"."conso_mensuel ".$name;
+$lien_telechargement = "C:/"."conso_mensuel ".$name;
 $graph->Stroke($lien_telechargement.".png");
 //$graph->Stroke("..\..\Downloads/name1.png");
 //var_dump($name);
