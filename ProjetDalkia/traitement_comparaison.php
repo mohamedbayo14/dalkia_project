@@ -12,7 +12,9 @@
 
     <style>
         
-        
+        #test{
+            color:white;
+        }
 
         h2
         {
@@ -49,8 +51,10 @@
     <h2>Courbes de comparaison</h2>
     <br><br>
     <div id="chartdiv"></div>
+    <br>
     <a href="page_comparaison.php">
-        <button type="button" class="btn btn-success">Retour</button>
+        <br>
+       <center> <button type="button" class="btn btn-success">Retour</button> </center>
     </a>
 </body>
 </html>
@@ -105,7 +109,7 @@ $Cout_octobre=(($octobre*$_POST['R1'])+($_POST['R2']*141)/12)*1.055;
 $Cout_novembre=(($novembre*$_POST['R1'])+($_POST['R2']*141)/12)*1.055;
 $Cout_decembre=(($decembre*$_POST['R1'])+($_POST['R2']*141)/12)*1.055;
 
-$Cout_Dalkia=-($Cout_janvier+$Cout_fevrier+$Cout_mars+$Cout_avril+$Cout_mai+$Cout_juin+$Cout_juillet+$Cout_aout+$Cout_septembre+$Cout_octobre+$Cout_novembre+$Cout_decembre);
+
 
 //Calcul cout du fioul
 
@@ -169,12 +173,15 @@ $datay1 = array($Cout_janvier,$Cout_fevrier,$Cout_mars,$Cout_avril,$Cout_mai,$Co
 $datay2 = array($Cout_fioul_janvier,$Cout_fioul_fevrier,$Cout_fioul_mars,$Cout_fioul_avril,$Cout_fioul_mai,$Cout_fioul_juin,$Cout_fioul_juillet,$Cout_fioul_aout,$Cout_fioul_septembre,$Cout_fioul_octobre,$Cout_fioul_novembre,$Cout_fioul_decembre);
 $datay3 = array($Cout_gaz_janvier,$Cout_gaz_fevrier,$Cout_gaz_mars,$Cout_gaz_avril,$Cout_gaz_mai,$Cout_gaz_juin,$Cout_gaz_juillet,$Cout_gaz_aout,$Cout_gaz_septembre,$Cout_gaz_octobre,$Cout_gaz_novembre,$Cout_gaz_decembre);
 
-$Cout_gaz=-($Cout_gaz_janvier+$Cout_gaz_fevrier+$Cout_gaz_mars+$Cout_gaz_avril+$Cout_gaz_mai+$Cout_gaz_juin+$Cout_gaz_juillet+$Cout_gaz_aout+$Cout_gaz_septembre+$Cout_gaz_octobre+$Cout_gaz_novembre+$Cout_gaz_decembre);
+$Cout_gaz=($Cout_gaz_janvier+$Cout_gaz_fevrier+$Cout_gaz_mars+$Cout_gaz_avril+$Cout_gaz_mai+$Cout_gaz_juin+$Cout_gaz_juillet+$Cout_gaz_aout+$Cout_gaz_septembre+$Cout_gaz_octobre+$Cout_gaz_novembre+$Cout_gaz_decembre);
 
-$Cout_fioul=-($Cout_fioul_janvier+$Cout_fioul_fevrier+$Cout_fioul_mars+$Cout_fioul_avril+$Cout_fioul_mai+$Cout_fioul_juin+$Cout_fioul_juillet+$Cout_fioul_aout+$Cout_fioul_septembre+$Cout_fioul_octobre+$Cout_fioul_novembre+$Cout_fioul_decembre);
+$Cout_fioul=($Cout_fioul_janvier+$Cout_fioul_fevrier+$Cout_fioul_mars+$Cout_fioul_avril+$Cout_fioul_mai+$Cout_fioul_juin+$Cout_fioul_juillet+$Cout_fioul_aout+$Cout_fioul_septembre+$Cout_fioul_octobre+$Cout_fioul_novembre+$Cout_fioul_decembre);
 
-$Comparaison_dalkia_fioul=($Cout_Dalkia-$Cout_fioul)/$Cout_fioul;
-$Comparaison_dalkia_gaz=($Cout_Dalkia-$Cout_gaz)/$Cout_gaz;
+$Cout_Dalkia=($Cout_janvier+$Cout_fevrier+$Cout_mars+$Cout_avril+$Cout_mai+$Cout_juin+$Cout_juillet+$Cout_aout+$Cout_septembre+$Cout_octobre+$Cout_novembre+$Cout_decembre);
+
+$Comparaison_dalkia_fioul=(($Cout_Dalkia-$Cout_fioul)/$Cout_fioul);
+$Comparaison_dalkia_gaz=(($Cout_Dalkia-$Cout_gaz)/$Cout_gaz);
+
 
 
 
@@ -398,3 +405,31 @@ var chart = AmCharts.makeChart("chartdiv", {
 });
 
 </script>
+
+<br>
+<br>
+<center>
+<section>
+                <h4 class="formtitle" > <font color="white"> Cout Annuel Dalkia </font> </h4>
+                <div class="form-group form-row">
+                    <input class="form-control col-sm-4" id="Dalkia" name="Dalkia" value=<?php echo round($Cout_Dalkia,2)?> disabled="disabled">
+                </div>
+                <h4 class="formtitle"> <font color="white"> Cout Annuel Gaz </font> </h4>
+                <div class="form-group form-row">
+                    <input class="form-control col-sm-8" id="Gaz" name="Gaz" value=<?php echo round($Cout_gaz,2) ?> disabled="disabled" >
+                </div>
+                <h4 class="formtitle"> <font color="white"> Cout Annuel Fioul </font> </h4>
+                <div class="form-group form-row">
+                    <input class="form-control col-sm-8" id="fioul" name="Fioul" value=<?php echo round($Cout_fioul,2) ?> disabled="disabled">
+                </div>
+                <br>
+                <h4 class="formtitle"> <font color="white"> Comparaison Dalkia Fioul </font> </h4>
+                <div class="form-group form-row">
+                    <input class="form-control col-sm-8" id="$Comparaison_dalkia_fioul" name="$Comparaison_dalkia_fioul" value=<?php echo round($Comparaison_dalkia_fioul,2) ?> disabled="disabled" >
+                </div>
+                <h4 class="formtitle"> <font color="white"> Comparaison Dalkia Gaz</font> </h4>
+                <div class="form-group form-row">
+                    <input class="form-control col-sm-8" id="$Comparaison_dalkia_gaz" name="$Comparaison_dalkia_gaz" value=<?php echo round($Comparaison_dalkia_gaz,2) ?> disabled="disabled" >
+                </div>
+</section>
+    </center>
