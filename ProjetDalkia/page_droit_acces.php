@@ -73,7 +73,7 @@
             
             
             <br>
-            <center><p> <button class="btn btn-primary " type="submit" name="valid_contact">Valider</button> </p></center>
+            <center><p> <button class="btn btn-primary " type="submit" onclick="return confirm('Êtes-vous sûr de votre choix ?')" name="valid_contact">Valider</button> </p></center>
            
         </form>
 
