@@ -27,12 +27,13 @@
     
     <style>
     #chartdiv {
-      width: 100%;
+      width: 80%;
       height: 500px;
       margin-top: 200px;
       background:#F9F9F9;
       opacity: 0.75;
       padding: 25px;
+      margin: auto;
   }
     body
     {
@@ -83,7 +84,7 @@
            
         </form>
     </div>
-    <br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div id="chartdiv"></div>
 
     <!-- Optional JavaScript -->
@@ -264,6 +265,7 @@ let dateAxis = chart.xAxes.push(new am4charts.DateAxis());
 dateAxis.renderer.minGridDistance = 60;
 
 let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.title.text = "Consommation en kWh";
 
 // Create series
 let series = chart.series.push(new am4charts.LineSeries());

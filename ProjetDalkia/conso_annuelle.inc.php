@@ -246,9 +246,9 @@ categoryAxis.renderer.grid.template.location = 0;
 categoryAxis.renderer.minGridDistance = 30;
 
 categoryAxis.renderer.labels.template.adapter.add("dy", function(dy, target) {
-  if (target.dataItem && target.dataItem.index & 2 == 2) {
+  /*if (target.dataItem && target.dataItem.index & 2 == 2) {
     return dy + 25;
-  }
+  }*/
   return dy;
 });
 
@@ -261,6 +261,7 @@ series.dataFields.categoryX = "annees";
 series.name = "consommation";
 series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/]";
 series.columns.template.fillOpacity = .8;
+valueAxis.title.text = "Consommation en kWh";
 
 var columnTemplate = series.columns.template;
 columnTemplate.strokeWidth = 2;
