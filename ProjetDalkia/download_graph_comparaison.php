@@ -29,8 +29,8 @@ while ($donnees = $reponse->fetch())
 } 
 
 
-require_once ('C:\wamp64\www\Ping\projet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
-require_once ('C:\wamp64\www\Ping\projet\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
+require_once ('C:\wamp64\www\ping\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
+require_once ('C:\wamp64\www\ping\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
 $bdd=new PDO('mysql:host=localhost;dbname=dalkia_database','root','', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   
 //Calcul du cout de la solution dalkia
@@ -170,7 +170,7 @@ $graph->legend->SetFrameWeight(1);
 
 // Output line
 $name=date("d-m-Y")."-".date("H-i")."-".$_POST['nom_entreprise'];
-$lien_telechargement = "C:\Users\bayo1\Bureau/"."comparaison_conso ".$name;
+$lien_telechargement = "C:/"."comparaison_conso ".$name;
 $graph->Stroke($lien_telechargement.".png");
 //$graph->Stroke("..\..\Downloads/name1.png");
 //var_dump($name);

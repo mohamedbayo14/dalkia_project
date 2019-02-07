@@ -79,8 +79,8 @@
           
         </div></div>
      <div class="Graph">
-           <p> <button class="btn btn-primary" type="submit" name="valid_contact">Valider</button> </p>
-           
+           <p> <button class="btn btn-primary" type="submit" onclick="return confirm('Êtes-vous sûr de votre choix ?')" name="valid_contact">Valider</button> </p>
+          
         
     
      
