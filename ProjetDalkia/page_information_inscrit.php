@@ -30,7 +30,7 @@
 
     body
     {
-     background-image: url("photo/conception.jpg");
+     background-image: url("photo/catalina.jpg");
      background-size: cover
     }
 

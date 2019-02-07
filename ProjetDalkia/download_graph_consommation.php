@@ -24,8 +24,8 @@ while ($donnees = $reponse->fetch())
     $novembre= intval($donnees["novembre"]);   
     $decembre= intval($donnees["decembre"]);
 };
-require_once ('C:\wamp64\www\ping\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
-require_once ('C:\wamp64\www\ping\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
+require_once ('C:\wamp64\www\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph.php');
+require_once ('C:\wamp64\www\dalkia_project\ProjetDalkia\jpgraph-4.2.5\src\jpgraph_line.php');
 $bdd=new PDO('mysql:host=localhost;dbname=dalkia_database','root','', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   
 $datay1 = array($janvier,$fevrier,$mars,$avril,$mai,$juin,$juillet,$aout,$septembre,$octobre,$novembre,$decembre );
@@ -35,7 +35,7 @@ $graph->SetScale("textlin");
 $theme_class=new UniversalTheme;
 $graph->SetTheme($theme_class);
 $graph->img->SetAntiAliasing(false);
-$graph->title->Set("Consommation de l'entreprise en MW");
+$graph->title->Set("Consommation de l'entreprise en MWh");
 $graph->SetBox(false);
 $graph->SetMargin(100,100,100,100);
 $graph->img->SetAntiAliasing();

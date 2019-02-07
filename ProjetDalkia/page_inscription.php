@@ -27,7 +27,7 @@
 
     body
     {
-     background-image: url("photo/paysage.jpg");
+     background-image: url("photo/catalina.jpg");
      background-size: cover;
      background-position: center; 
     }
@@ -65,7 +65,7 @@
     
     <br/>
     
-<p2><font color = "white">Le mot de passe doit contenir au moins 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial. Taille minimale du mot de passe : 8 caractères</font></p2>
+<p2>Le mot de passe doit contenir au moins 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial. Taille minimale du mot de passe : 8 caractères</p2>
 
        <br />
         <!-- appel de la page traitement_inscription.php lorsque qu'on appuie sur le bouton validé et lorsques toutes les conditions sont respectées-->

@@ -23,8 +23,8 @@
         }
         body
         {
-           background-image: url("photo/landscape.jpg");
-           background-size: cover
+           background-image: url("photo/catalina.jpg");
+           background-size: coverz
         }
         html, body {
             width: 100%;

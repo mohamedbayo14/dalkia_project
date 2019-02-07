@@ -27,7 +27,7 @@
         
     body
     {
-     background-image: url("photo/fjord.jpg");
+     background-image: url("photo/catalina.jpg");
      background-size: cover
 
     }
