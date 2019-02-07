@@ -31,7 +31,7 @@
 <style>
         body
         {
-           background-image: url("photo/montain.jpg");
+           background-image: url("photo/catalina.jpg");
            background-size: cover
         }
      form

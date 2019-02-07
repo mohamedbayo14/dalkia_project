@@ -30,7 +30,7 @@
     <style>
         body
         {
-             background-image: url("./photo/conso.jpg");
+             background-image: url("./photo/catalina.jpg");
              background-size: cover
 
         }
